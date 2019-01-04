@@ -1,0 +1,17 @@
+#N canvas 0 0 803 349 10;
+#X obj 56 21 loadbang;
+#X obj 56 220 tabosc4~ square;
+#X obj 55 296 dac~;
+#X msg 56 92 440 \; square sinesum 1024 1 0 0.333333 0 0.2 0 0.142857
+0 0.111111 0 0.090909 0 0.076923 0 0.066667 0 0.058824 0 0.052632 0
+0.047619 0 \; square normalize 1 \;;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array square 100 float 2;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 479 63 graph;
+#X floatatom 56 182 5 0 0 0 - - -;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 5 0;
+#X connect 5 0 1 0;

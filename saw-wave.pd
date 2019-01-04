@@ -1,0 +1,18 @@
+#N canvas 464 539 718 400 10;
+#X obj 34 39 loadbang;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array saw 2051 float 2;
+#X coords 0 1 2051 -1 200 140 1;
+#X restore 437 60 graph;
+#X floatatom 34 191 5 0 0 0 - - -;
+#X obj 34 240 tabosc4~ saw;
+#X obj 34 299 dac~;
+#X msg 34 91 440 \; saw sinesum 1024 1 0.5 0.333333 0.25 0.2 0.16667
+0.142857 0.125 0.111111 0.1 0.090909 0.083333 0.076923 0.071429 0.066667
+0.0625 0.055556 0.052632 0.05 0.047619 0.045455 \; saw normalize 1
+\;;
+#X connect 0 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 5 0 2 0;
